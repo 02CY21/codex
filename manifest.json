@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SubSync Tab Audio Translator",
+  "version": "0.5.0",
+  "description": "Capture the current tab audio and generate continuous bilingual subtitles locally.",
+  "permissions": ["tabCapture", "offscreen", "storage", "activeTab", "tabs", "sidePanel"],
+  "host_permissions": ["https://huggingface.co/*", "https://*.huggingface.co/*", "https://*.xethub.hf.co/*", "https://cdn-lfs.huggingface.co/*", "https://*.tcloudbasegateway.com/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "content_security_policy": { "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Open SubSync" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "options_page": "options.html",
+  "icons": {}
+}

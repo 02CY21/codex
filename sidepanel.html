@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SubSync</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><span>◫</span><div><strong>SubSync</strong><small>TAB AUDIO TRANSLATOR</small></div></div>
+    <span class="state-dot" id="stateDot"></span>
+  </header>
+  <main>
+    <div class="hero"><span class="eyebrow">INTERNAL AUDIO CAPTURE</span><h1>听见当前标签页。</h1><p>直接捕获浏览器内部音频，不经过麦克风。适合英语视频、播客和在线课程。</p></div>
+    <button class="capture-button" id="toggle"><span id="toggleIcon">▶</span><span id="toggleText">开始捕获当前标签页</span></button>
+    <div class="model-status" id="modelStatus"><span class="spinner"></span>首次使用将下载快速 Whisper Tiny 模型，请稍候。</div>
+    <section class="transcript" id="transcript" aria-live="polite"><div class="empty"><span>◌</span><strong>等待标签页音频</strong><p>先播放英语内容，再点击上方按钮开始。</p></div></section>
+    <div class="actions"><div><button id="settings">翻译设置</button><button id="clear">清空记录</button></div><span id="counter">0 RECORDS</span></div>
+    <div class="notice"><strong>使用提示</strong> 只捕获当前标签页的音频，不读取麦克风。翻译优先使用豆包 API；API Key 仅保存在本浏览器并发送到火山方舟。</div>
+  </main>
+  <script src="sidepanel.js" type="module"></script>
+</body>
+</html>
